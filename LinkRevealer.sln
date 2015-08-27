@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkRevealer", "LinkRevealer\LinkRevealer.csproj", "{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkRevealerWeb", "LinkRevealerWeb\LinkRevealerWeb.csproj", "{AC523851-A15C-489B-B032-B6F7D5713F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0BDAC3-1980-4D39-854B-FFE0B3F15CA8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AC523851-A15C-489B-B032-B6F7D5713F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC523851-A15C-489B-B032-B6F7D5713F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC523851-A15C-489B-B032-B6F7D5713F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC523851-A15C-489B-B032-B6F7D5713F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
