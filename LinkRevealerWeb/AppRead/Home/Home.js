@@ -104,19 +104,19 @@
                         }
                     }
 
-                    $("#links-table").append("<div class='ms-Table-row'>" + 
-                                                "<span class='ms-Table-cell small'>" + vInnerText + "</span>" +
-                                                "<span class='ms-Table-cell small'>" + hrefText + "</span>" + 
+                    if (linkIsPhishy) {
+                        $("#links-table").append("<div class='ms-Table-row'>" +
+                                                "<span class='ms-Table-cell phishy-link'>" + vInnerText + "</span>" +
+                                                "<span class='ms-Table-cell phishy-link'>" + hrefText + "</span>" +
                                                 "</div>");
+                    }
+                    else {
+                        $("#links-table").append("<div class='ms-Table-row'>" +
+                                               "<span class='ms-Table-cell normal-link'>" + vInnerText + "</span>" +
+                                               "<span class='ms-Table-cell normal-link'>" + hrefText + "</span>" +
+                                               "</div>");
+                    }
 
-                    //if (linkIsPhishy) {
-                    //    //Display the link text
-                    //    $("#links-table").append("<tr><th>" + vInnerText + "</th><th>" + hrefText  + "</tr>");
-                    //}
-                    //else {
-                    //    // Display the URL behind the link text
-                    //    $("#links-table").append("<tr><th></th><th>" + vInnerText + "</th><th>" + hrefText + "</tr>");
-                    //}
                 }
             );
     };

@@ -18,14 +18,14 @@
         color: #4ea2df;
     }
 
-.logo {
-    position:absolute;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    top:15px;
-    right:15px;
+.normal-link {
+    font-size: 9px;
+    width:auto;
 }
 
-.small {
-    font-size: 8px;
+.phishy-link {
+    font-size: 9px;
+    background-color: red;
+    color: white;
+    width:auto;
 }
