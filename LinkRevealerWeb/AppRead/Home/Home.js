@@ -104,14 +104,19 @@
                         }
                     }
 
-                    if (linkIsPhishy) {
-                        //Display the link text
-                        $("#links-table").append("<tr><th>" + vInnerText + "</th><th>" + hrefText  + "</tr>");
-                    }
-                    else {
-                        // Display the URL behind the link text
-                        $("#links-table").append("<tr><th></th><th>" + vInnerText + "</th><th>" + hrefText + "</tr>");
-                    }
+                    $("#links-table").append("<div class='ms-Table-row'>" + 
+                                                "<span class='ms-Table-cell small'>" + vInnerText + "</span>" +
+                                                "<span class='ms-Table-cell small'>" + hrefText + "</span>" + 
+                                                "</div>");
+
+                    //if (linkIsPhishy) {
+                    //    //Display the link text
+                    //    $("#links-table").append("<tr><th>" + vInnerText + "</th><th>" + hrefText  + "</tr>");
+                    //}
+                    //else {
+                    //    // Display the URL behind the link text
+                    //    $("#links-table").append("<tr><th></th><th>" + vInnerText + "</th><th>" + hrefText + "</tr>");
+                    //}
                 }
             );
     };
