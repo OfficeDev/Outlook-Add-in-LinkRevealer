@@ -20,7 +20,6 @@
     // Displays the "Subject" and "From" fields, based on the current mail item
     function retrieveMessageBody() {
         var item = Office.cast.item.toItemRead(Office.context.mailbox.item);
-        var from;
         if (item.itemType === Office.MailboxEnums.ItemType.Message) {
             sendRequest();
         }
