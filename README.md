@@ -14,7 +14,7 @@
 <a name="summary"></a>
 ##Summary
 
-In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. . The following is a  picture of the scenario in question.
+In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. The following is a  picture of the scenario in question.
 
  ![](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/readme-images/screen2.PNG)
 
