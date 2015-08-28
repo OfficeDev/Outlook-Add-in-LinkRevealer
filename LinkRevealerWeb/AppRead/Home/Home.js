@@ -84,6 +84,7 @@
         var htmlParser = new DOMParser().parseFromString($xml.text(), "text/html");
         var links = htmlParser.getElementsByTagName("a");
         var phishyLinkCount = 0;
+        var normalLinkCount = 0;
         $.each(
                links,
                 function (i, v) {
@@ -92,24 +93,17 @@
                     var vInnerText = v.innerText.toLowerCase().trim();
                     var hrefText = v.href.toLowerCase().trim();
                     var phishyIcon = "";
-                    var linkIsPhishy = false;
+                    var linkIsPhishy = ((vInnerText.search("http") == 0) && vInnerText != hrefText);
                     
-                    if (vInnerText.search("http") == 0)
-                    {
-                        if (vInnerText != hrefText)
-                        {
-                            linkIsPhishy = true;
-                            phishyLinkCount++;
-                        }
-                    }
-
                     if (linkIsPhishy) {
+                        phishyLinkCount++;
                         $("#links-table").append("<div class='ms-Table-row'>" +
                                                 "<span class='ms-Table-cell phishy-link'>" + vInnerText + "</span>" +
                                                 "<span class='ms-Table-cell phishy-link'>" + hrefText + "</span>" +
                                                 "</div>");
                     }
                     else {
+                        normalLinkCount++;
                         $("#links-table").append("<div class='ms-Table-row'>" +
                                                "<span class='ms-Table-cell normal-link'>" + vInnerText + "</span>" +
                                                "<span class='ms-Table-cell normal-link'>" + hrefText + "</span>" +
@@ -118,6 +112,8 @@
 
                 }
             );
+
+        $('#result').append("Number of links found in this email: " + (normalLinkCount + phishyLinkCount) + " Number of phishy links (red): " + phishyLinkCount);
     };
 
 })();

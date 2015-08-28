@@ -21,6 +21,7 @@
 .normal-link {
     font-size: 9px;
     width:auto;
+    white-space: nowrap;
 }
 
 .phishy-link {
@@ -28,4 +29,5 @@
     background-color: red;
     color: white;
     width:auto;
+    white-space: nowrap;
 }
