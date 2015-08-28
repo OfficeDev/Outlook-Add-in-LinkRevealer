@@ -102,14 +102,14 @@
                     
                     if (linkIsPhishy) {
                         phishyLinkCount++;
-                        $("#links-table").append("<div class='ms-Table-row'>" +
+                        $("#links-table").append("<div class='ms-Table-row ms-font-xs ms-bgColor-redDark ms-font-color-white'>" +
                                                 "<span class='ms-Table-cell phishy-link'>" + vInnerText + "</span>" +
                                                 "<span class='ms-Table-cell phishy-link'>" + hrefText + "</span>" +
                                                 "</div>");
                     }
                     else {
                         normalLinkCount++;
-                        $("#links-table").append("<div class='ms-Table-row'>" +
+                        $("#links-table").append("<div class='ms-Table-row ms-font-xs'>" +
                                                "<span class='ms-Table-cell normal-link'>" + vInnerText + "</span>" +
                                                "<span class='ms-Table-cell normal-link'>" + hrefText + "</span>" +
                                                "</div>");

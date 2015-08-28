@@ -23,15 +23,10 @@
     }
 
 .normal-link {
-    font-size: 9px;
-    width:auto;
     white-space: nowrap;
 }
 
 .phishy-link {
-    font-size: 9px;
-    background-color: red;
-    color: white;
     width:auto;
     white-space: nowrap;
 }
