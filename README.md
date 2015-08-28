@@ -18,9 +18,6 @@ In this sample we show you how to use the [JavaScript API for Office](https://ms
 
  - screenshot needed
 
-We are creating packing slips from customer order data. The packing slip document is shown on the left of the preceding screen shot, with our Office Add-in on the right as a task pane app. When you select an order using the order id drop-down in the task pane on the right and then click the Populate button, the packing slip document is populated with data from that order.  The sample uses the Javascript API for Office to interact with the Word document by populating custom XML parts defined in the document with order data. These custom XML parts are bound to content controls that define the UI or the document. To simplify this sample, the order data is stored in the same JavaScript file that creates the add-in. However, in a real application, that data could come from a data source anywhere on the web.
-
-
 <a name="prerequisites"></a>
 ##Prerequisites
 This sample requires the following:  
@@ -50,10 +47,17 @@ This solution was created in [Visual Studio](https://msdn.microsoft.com/library/
 
 <a name="build"></a>
 ##Build and debug
-1.Open the LinkRevealer.sln file in Visual Studio.
+1. Open the LinkRevealer.sln file in Visual Studio.
 
 
-2.Press F5 to build and deploy the sample add-in and launch it in Outlook.
+2 .Press F5 to build and deploy the sample add-in 
+
+3. When Outlook launches, select an email from your inbox
+
+4. Launch the add-in by selecting it from the add-in app bar
+
+5. When the add-in launches, it will scan the selected email message body for hyperlinks. Any links found will be displayed in a table in the main pane of the add-in. If the add-in thinks a link is suspicious, it will mark that row in the table in red. A suspicious link is defined as one that has a URL in the link text that does not match the URL in the actual href of the link. 
+
 
 
 
