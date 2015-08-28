@@ -14,7 +14,7 @@
 <a name="summary"></a>
 ##Summary
 
-In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. . The following is a  picture of the scenario in question.
+In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. The following is a  picture of the scenario in question.
 
  ![](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/readme-images/screen2.PNG)
 
@@ -34,12 +34,12 @@ This sample requires the following:
 This solution was created in [Visual Studio](https://msdn.microsoft.com/library/office/fp179827.aspx#Tools_CreatingWithVS). It consists of two projects - LinkRevealer and LinkRevealerWeb. Here's a list of the key files within those projects. 
 #### InvoiceManager project
 
-* [LinkRevealer.xml](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealer/LinkRevealerManifest/LinkRevealer.xml) The [manifest file](https://msdn.microsoft.com/library/office/jj220082.aspx#StartBuildingApps_AnatomyofApp) for the Word add-in.
+* [```LinkRevealer.xml```](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealer/LinkRevealerManifest/LinkRevealer.xml) The [manifest file](https://msdn.microsoft.com/library/office/jj220082.aspx#StartBuildingApps_AnatomyofApp) for the Word add-in.
 
 #### LinkRevealerrWeb project
 
-* [Home.html](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.html) The HTML user interface for the Word add-in.
-* [Home.js](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.js) The JavaScript code used by Home.html to interact with Word using the JavaScript for Office API. 
+* [```Home.html```](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.html) The HTML user interface for the Word add-in.
+* [```Home.js```](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.js) The JavaScript code used by Home.html to interact with Word using the JavaScript for Office API. 
 
 
 <a name="codedescription"></a>
@@ -47,7 +47,7 @@ This solution was created in [Visual Studio](https://msdn.microsoft.com/library/
 
 <a name="build"></a>
 ##Build and debug
-1. Open the LinkRevealer.sln file in Visual Studio.
+1. Open the [```LinkRevealer.sln```](LinkRevealer.sln) file in Visual Studio.
 2. Press F5 to build and deploy the sample add-in 
 3. When Outlook launches, select an email from your inbox
 4. Launch the add-in by selecting it from the add-in app bar
