@@ -48,8 +48,6 @@ This solution was created in [Visual Studio](https://msdn.microsoft.com/library/
 <a name="codedescription"></a>
 ##Description of the code
 
-For a detailed description of this sample, see [Exploring the JavaScript API for Office: Data Binding and Custom XML Parts](https://msdn.microsoft.com/en-us/magazine/dn166930.aspx)
-
 <a name="build"></a>
 ##Build and debug
 1.Open the LinkRevealer.sln file in Visual Studio.
@@ -62,7 +60,7 @@ For a detailed description of this sample, see [Exploring the JavaScript API for
 <a name="troubleshooting"></a>
 ## Troubleshooting
 
-- If the add-in does not appear in the task pane, Choose **Insert > My Add-ins >  InvoiceManagerSample**.
+- If the add-in does not appear in the task pane, Choose **Insert > My Add-ins >  Link Revealer**.
 
 <a name="questions"></a>
 ## Questions and comments
