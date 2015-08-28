@@ -48,17 +48,10 @@ This solution was created in [Visual Studio](https://msdn.microsoft.com/library/
 <a name="build"></a>
 ##Build and debug
 1. Open the LinkRevealer.sln file in Visual Studio.
-
-
-2 .Press F5 to build and deploy the sample add-in 
-
+2. Press F5 to build and deploy the sample add-in 
 3. When Outlook launches, select an email from your inbox
-
 4. Launch the add-in by selecting it from the add-in app bar
-
 5. When the add-in launches, it will scan the selected email message body for hyperlinks. Any links found will be displayed in a table in the main pane of the add-in. If the add-in thinks a link is suspicious, it will mark that row in the table in red. A suspicious link is defined as one that has a URL in the link text that does not match the URL in the actual href of the link. 
-
-
 
 
 <a name="troubleshooting"></a>

@@ -109,7 +109,7 @@
                     }
                     else {
                         normalLinkCount++;
-                        $("#links-table").append("<div class='ms-Table-row ms-font-xs'>" +
+                        $("#links-table").append("<div class='ms-Table-row ms-font-xs ms-font-color-white'>" +
                                                "<span class='ms-Table-cell normal-link'>" + vInnerText + "</span>" +
                                                "<span class='ms-Table-cell normal-link'>" + hrefText + "</span>" +
                                                "</div>");
