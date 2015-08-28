@@ -37,13 +37,12 @@ This sample requires the following:
 This solution was created in [Visual Studio](https://msdn.microsoft.com/library/office/fp179827.aspx#Tools_CreatingWithVS). It consists of two projects - LinkRevealer and LinkRevealerrWeb. Here's a list of the key files within those projects. 
 #### InvoiceManager project
 
-* [InvoiceManager.xml](https://github.com/OfficeDev/Word-Add-in-JavaScript-InvoiceManager/blob/master/InvoiceManagerSample/InvoiceManagerManifest/InvoiceManager.xml) The [manifest file](https://msdn.microsoft.com/library/office/jj220082.aspx#StartBuildingApps_AnatomyofApp) for the Word add-in.
-* [PackingSlip.docx](https://github.com/OfficeDev/Word-Add-in-JavaScript-InvoiceManager/blob/master/InvoiceManagerSample/PackingSlip.docx) The example packing slip Word document used in this sample. 
+* [LinkRevealer.xml](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealer/LinkRevealerManifest/LinkRevealer.xml) The [manifest file](https://msdn.microsoft.com/library/office/jj220082.aspx#StartBuildingApps_AnatomyofApp) for the Word add-in.
 
-#### InvoiceManagerWeb project
+#### LinkRevealerrWeb project
 
-* [Home.html](https://github.com/OfficeDev/Word-Add-in-JavaScript-InvoiceManager/blob/master/InvoiceManagerSampleWeb/App/Home/Home.html) The HTML user interface for the Word add-in.
-* [Home.js](https://github.com/OfficeDev/Word-Add-in-JavaScript-InvoiceManager/blob/master/InvoiceManagerSampleWeb/App/Home/Home.js) The JavaScript code used by Home.html to interact with Word using the JavaScript for Office API. 
+* [Home.html](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.html) The HTML user interface for the Word add-in.
+* [Home.js](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.js) The JavaScript code used by Home.html to interact with Word using the JavaScript for Office API. 
 
 
 <a name="codedescription"></a>
@@ -53,19 +52,12 @@ For a detailed description of this sample, see [Exploring the JavaScript API for
 
 <a name="build"></a>
 ##Build and debug
-1.Open the InvoiceManager.sln file in Visual Studio.
+1.Open the LinkRevealer.sln file in Visual Studio.
 
 
-2.Press F5 to build and deploy the sample add-in and open it in Word.
+2.Press F5 to build and deploy the sample add-in and launch it in Outlook.
 
 
-3.In the app task pane, select an order in the Order ID drop-down list.
-
-
-4.Choose Populate to populate the packing slip in the Word document with information from the selected order.
-
-
-You can view a list of the custom XML parts in a document by opening the XML Mapping pane in Word (Developer tab).
 
 <a name="troubleshooting"></a>
 ## Troubleshooting
