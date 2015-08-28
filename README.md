@@ -14,9 +14,9 @@
 <a name="summary"></a>
 ##Summary
 
-In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to write data to a set of custom XML parts that are bound to content controls within a Word document. The following is a  picture of the scenario in question.
+In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. . The following is a  picture of the scenario in question.
 
-![Screenshot of running sample](https://cloud.githubusercontent.com/assets/8550529/9298298/4b980684-4461-11e5-8c00-8f86701e55c2.PNG)
+ - screenshot needed
 
 We are creating packing slips from customer order data. The packing slip document is shown on the left of the preceding screen shot, with our Office Add-in on the right as a task pane app. When you select an order using the order id drop-down in the task pane on the right and then click the Populate button, the packing slip document is populated with data from that order.  The sample uses the Javascript API for Office to interact with the Word document by populating custom XML parts defined in the document with order data. These custom XML parts are bound to content controls that define the UI or the document. To simplify this sample, the order data is stored in the same JavaScript file that creates the add-in. However, in a real application, that data could come from a data source anywhere on the web.
 
@@ -34,7 +34,7 @@ This sample requires the following:
 <a name="components"></a>
 ##Key components
 
-This solution was created in [Visual Studio](https://msdn.microsoft.com/library/office/fp179827.aspx#Tools_CreatingWithVS). It consists of two projects - InvoiceManager and InvoiceManagerWeb. Here's a list of the key files within those projects. 
+This solution was created in [Visual Studio](https://msdn.microsoft.com/library/office/fp179827.aspx#Tools_CreatingWithVS). It consists of two projects - LinkRevealer and LinkRevealerrWeb. Here's a list of the key files within those projects. 
 #### InvoiceManager project
 
 * [InvoiceManager.xml](https://github.com/OfficeDev/Word-Add-in-JavaScript-InvoiceManager/blob/master/InvoiceManagerSample/InvoiceManagerManifest/InvoiceManager.xml) The [manifest file](https://msdn.microsoft.com/library/office/jj220082.aspx#StartBuildingApps_AnatomyofApp) for the Word add-in.
@@ -70,14 +70,12 @@ You can view a list of the custom XML parts in a document by opening the XML Map
 <a name="troubleshooting"></a>
 ## Troubleshooting
 
-- If the add-in starts with a blank document, ensure that the **Start Document** property of the InvoiceManager project is set to *PackingSlip.docx* and not just to Word.
-![](https://cloud.githubusercontent.com/assets/8550529/9298211/b29908a8-445f-11e5-8887-0b3e6a9c8649.png)
 - If the add-in does not appear in the task pane, Choose **Insert > My Add-ins >  InvoiceManagerSample**.
 
 <a name="questions"></a>
 ## Questions and comments
 
-- If you have any trouble running this sample, please [log an issue](https://github.com/OfficeDev/Word-Add-in-JavaScript-InvoiceManager/issues).
+- If you have any trouble running this sample, please [log an issue](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/issues).
 - Questions about Office Add-ins development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/office-addins). Make sure that your questions or comments are tagged with [office-addins].
 
 
@@ -87,8 +85,6 @@ You can view a list of the custom XML parts in a document by opening the XML Map
 - [More Add-in samples](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-Add-in)
 - [Office Add-ins](http://msdn.microsoft.com/library/office/jj220060.aspx)
 - [Anatomy of an Add-in](https://msdn.microsoft.com/library/office/jj220082.aspx#StartBuildingApps_AnatomyofApp)
-- [Bindings object (JavaScript API for Office)](http://msdn.microsoft.com/library/office/apps/fp160966.aspx)
-- [Binding to regions in a document or spreadsheet](http://msdn.microsoft.com/library/office/apps/fp123511(v=office.15).aspx)
 - [Creating an Office add-in with Visual Studio](https://msdn.microsoft.com/library/office/fp179827.aspx#Tools_CreatingWithVS)
 
 
