@@ -47,7 +47,7 @@ This solution was created in [Visual Studio](https://msdn.microsoft.com/library/
 
 <a name="build"></a>
 ##Build and debug
-1. Open the LinkRevealer.sln file in Visual Studio.
+1. Open the [```LinkRevealer.sln```](LinkRevealer.sln) file in Visual Studio.
 2. Press F5 to build and deploy the sample add-in 
 3. When Outlook launches, select an email from your inbox
 4. Launch the add-in by selecting it from the add-in app bar
