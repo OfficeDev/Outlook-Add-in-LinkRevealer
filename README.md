@@ -47,6 +47,10 @@ This solution was created in [Visual Studio](https://msdn.microsoft.com/library/
 <a name="codedescription"></a>
 ##Description of the code
 
+The core logic of this sample is in the [```Home.js```](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/LinkRevealerWeb/AppRead/Home/Home.js) file in the LinkRevealerWeb project. Once the add-in is initialized, the [```getAsync()```](https://msdn.microsoft.com/library/office/mt269089.aspx) method of the Body object is used to retrieve the body of the email in HTML format. When this asynchronous operation is completed, our callback function, processHtmlBody, is invoked. This function first loads the retrived body content into a DomParser. This object tree is then parsed using the getElementsByTagName("a") method to find all hyperlinks. Finally, each hyperlink is displayed on the UI and analyzed to see if any links are phishy. 
+
+Using body.getAsync() to retrieve the body of an email has numerous advantages over earlier solutions. In previous versions of Office.js, the only way to get the body of an email in a read scenario was to call [```makeEWSRequest```](https://msdn.microsoft.com/library/office/fp161019.aspx) on the mailbox object. Not only was the contruction of this SOAP request more involved, but it also required an add-in to have ReadWriteMailbox permissions. The getAsync() solution only requires that the add-in has ReadItem permissions.  
+
 <a name="build"></a>
 ##Build and debug
 1. Open the [```LinkRevealer.sln```](LinkRevealer.sln) file in Visual Studio.
