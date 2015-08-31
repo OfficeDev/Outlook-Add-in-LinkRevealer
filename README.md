@@ -1,4 +1,4 @@
-# Outlook add-in: Parsing the body of an email.
+# Outlook add-in: Mail add-in for a read scenario which finds and parses all links in the body of an email. 
 
 **Table of contents**
 
