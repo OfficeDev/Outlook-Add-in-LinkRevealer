@@ -93,14 +93,14 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="MyButtonLabel" DefaultValue="Launch Link Revealer"></bt:String>
-        <bt:String id="MyButtonTooltip" DefaultValue="Y"></bt:String>
+        <bt:String id="MyButtonTooltip" DefaultValue="Launches the add-in"></bt:String>
         <bt:String id="MyGroupLabel" DefaultValue="Link Revealer"></bt:String>
-        <bt:String id="MyButtonSuperTipTitle" DefaultValue="Foo"></bt:String>
+        <bt:String id="MyButtonSuperTipTitle" DefaultValue="Launches the add-in"></bt:String>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="MyDescription" DefaultValue="Link Revealer description"></bt:String>
-        <bt:String id="MyGroupTip" DefaultValue="X"></bt:String>
-        <bt:String id="MyButtonSuperTipDescription" DefaultValue="Bar"></bt:String>
+        <bt:String id="MyGroupTip" DefaultValue="OfficeDev samples"></bt:String>
+        <bt:String id="MyButtonSuperTipDescription" DefaultValue="OfficeDev samples"></bt:String>
       </bt:LongStrings>
     </Resources>
 
