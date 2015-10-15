@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+	xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+	xsi:type="MailApp">
   <Id>9d9b3855-17a7-44bb-af23-b073c5715bc4</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>[Provider name]</ProviderName>
+  <ProviderName>Microsoft Office Dev Center</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Link Revealer" />
   <Description DefaultValue="Link Revealer"/>
@@ -23,11 +26,84 @@
       </DesktopSettings>
     </Form>
   </FormSettings>
+
   <Permissions>ReadItem</Permissions>
+
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
     <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read" />
-    <Rule xsi:type="ItemHasKnownEntity" EntityType="Url"/>
+    <Rule xsi:type="ItemHasKnownEntity" EntityType="Url" />
   </Rule>
+
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+    <Description resid="MyDescription" />
+
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.3">
+        <bt:Set Name="Mailbox" />
+      </bt:Sets>
+    </Requirements>
+
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <FunctionFile resid="functionFile" />
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="LinkRevealerGroup">
+                <Label resid="MyGroupLabel"></Label>
+                <Tooltip resid="MyGroupTip"></Tooltip>
+
+                <Control xsi:type="Button" id="link.revealer.button">
+                  <Label resid="MyButtonLabel"></Label>
+                  <Tooltip resid="MyButtonTooltip"></Tooltip>
+                  <Supertip>
+                    <Title resid="MyButtonSuperTipTitle"></Title>
+                    <Description resid="MyButtonSuperTipDescription"></Description>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_16x16"></bt:Image>
+                    <bt:Image size="32" resid="icon1_32x32"></bt:Image>
+                    <bt:Image size="80" resid="icon1_80x80"></bt:Image>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="MyTaskPane"></SourceLocation>
+                  </Action>
+                </Control>
+
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon1_16x16" DefaultValue="~remoteAppUrl/Images/app_icon_small.png"></bt:Image>
+        <bt:Image id="icon1_32x32" DefaultValue="~remoteAppUrl/Images/app_icon.png"></bt:Image>
+        <bt:Image id="icon1_80x80" DefaultValue="~remoteAppUrl/Images/app_icon_small.png"></bt:Image>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="MyTaskPane" DefaultValue="~remoteAppUrl/AppRead/Home/Home.html"></bt:Url>
+        <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/AppRead/Home/Home.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="MyButtonLabel" DefaultValue="Launch Link Revealer"></bt:String>
+        <bt:String id="MyButtonTooltip" DefaultValue="Y"></bt:String>
+        <bt:String id="MyGroupLabel" DefaultValue="Link Revealer"></bt:String>
+        <bt:String id="MyButtonSuperTipTitle" DefaultValue="Foo"></bt:String>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="MyDescription" DefaultValue="Link Revealer description"></bt:String>
+        <bt:String id="MyGroupTip" DefaultValue="X"></bt:String>
+        <bt:String id="MyButtonSuperTipDescription" DefaultValue="Bar"></bt:String>
+      </bt:LongStrings>
+    </Resources>
+
+  </VersionOverrides>
 </OfficeApp>
+
