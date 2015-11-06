@@ -13,12 +13,7 @@
         $(document).ready(function () {
             app.initialize();
             var hostName = Office.context.mailbox.diagnostics.hostName;
-            if (hostName == 'OutlookWebApp') {
-                Office.context.mailbox.item.body.getAsync({ coercionType: "html" }, processHtmlBody);
-            }
-            else {
-                Office.context.mailbox.item.body.getAsync("html", processHtmlBody);
-            }
+            Office.context.mailbox.item.body.getAsync("html", processHtmlBody);
         });
     };
 
