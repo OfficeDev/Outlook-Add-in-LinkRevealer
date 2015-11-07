@@ -12,7 +12,6 @@
     Office.initialize = function (reason) {
         $(document).ready(function () {
             app.initialize();
-            var hostName = Office.context.mailbox.diagnostics.hostName;
             Office.context.mailbox.item.body.getAsync("html", processHtmlBody);
         });
     };
