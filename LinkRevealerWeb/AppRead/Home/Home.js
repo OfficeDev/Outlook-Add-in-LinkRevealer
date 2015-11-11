@@ -12,8 +12,7 @@
     Office.initialize = function (reason) {
         $(document).ready(function () {
             app.initialize();
-
-            Office.context.mailbox.item.body.getAsync({ coercionType: "html" }, processHtmlBody);
+            Office.context.mailbox.item.body.getAsync("html", processHtmlBody);
         });
     };
 
