@@ -14,10 +14,14 @@
 <a name="summary"></a>
 ##Summary
 
-In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. The following is a  picture of the scenario in question.
+In this sample we show you how to use the [JavaScript API for Office](https://msdn.microsoft.com/library/b27e70c3-d87d-4d27-85e0-103996273298(v=office.15)) to create an Outlook add-in that parses the body of an email looking for hyperlinks. The following is a  picture of the scenario in question (in the Outlook Web App).
 
- ![](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/readme-images/screen2.PNG)
+ ![](/readme-images/screen2.PNG)
  
+This add-in is configured to use [add-in commands](https://msdn.microsoft.com/EN-US/library/office/mt267547.aspx), so when you're reading your email in the desktop client, you launch the add-in by choosing this command button in the ribbon:
+
+![](/readme-images/commandbutton.png)
+
  It has happened to us all during our email lifetimes - we receive what looks like a regular email from what seems like a  trusted source that contains hyperlinks. We click on one of those links without thinking and are then at risk of having our machine, our systems or business compromised. This is a classic phishing scenario wherein the hyperlinks in an email are not what they seem. This sample shows an alternative way of verifying hyperlinks. Instead of hovering over a link to see what the real target URL behind the link text is, and perhaps risking an accidental click on said link, this add-in finds all links in an email and displays them in a decomposed format of link text and link URL. In this way, the user can see clearly what address is behind the link text. The sample goes a little further. If a link has a URL as the link text and that URL doesn't match the underlying href of the link, the link is flagged in red in the add-in to make sure the user sees this potentially phishy link. 
 
 <a name="prerequisites"></a>
@@ -58,7 +62,7 @@ Using body.getAsync() to retrieve the body of an email has numerous advantages o
 3. When Outlook launches, select an email from your inbox
 4. Launch the add-in by selecting it from the add-in app bar
 
-![](https://github.com/OfficeDev/Outlook-Add-in-LinkRevealer/blob/master/readme-images/screen1.PNG)
+![](readme-images/screen1.PNG)
 
 
 5. When the add-in launches, it will scan the selected email message body for hyperlinks. Any links found will be displayed in a table in the main pane of the add-in. If the add-in thinks a link is suspicious, it will mark that row in the table in red. A suspicious link is defined as one that has a URL in the link text that does not match the URL in the actual href of the link. 
