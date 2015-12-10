@@ -85,7 +85,7 @@
       <bt:Images>
         <bt:Image id="icon1_16x16" DefaultValue="~remoteAppUrl/Images/app_icon_small.png"></bt:Image>
         <bt:Image id="icon1_32x32" DefaultValue="~remoteAppUrl/Images/app_icon.png"></bt:Image>
-        <bt:Image id="icon1_80x80" DefaultValue="~remoteAppUrl/Images/app_icon_small.png"></bt:Image>
+        <bt:Image id="icon1_80x80" DefaultValue="~remoteAppUrl/Images/app_icon_large.png"></bt:Image>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="MyTaskPane" DefaultValue="~remoteAppUrl/AppRead/Home/Home.html"></bt:Url>
