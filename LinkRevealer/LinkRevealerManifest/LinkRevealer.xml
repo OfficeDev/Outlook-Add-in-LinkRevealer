@@ -55,11 +55,8 @@
             <OfficeTab id="TabDefault">
               <Group id="LinkRevealerGroup">
                 <Label resid="MyGroupLabel"></Label>
-                <Tooltip resid="MyGroupTip"></Tooltip>
-
                 <Control xsi:type="Button" id="link.revealer.button">
                   <Label resid="MyButtonLabel"></Label>
-                  <Tooltip resid="MyButtonTooltip"></Tooltip>
                   <Supertip>
                     <Title resid="MyButtonSuperTipTitle"></Title>
                     <Description resid="MyButtonSuperTipDescription"></Description>
