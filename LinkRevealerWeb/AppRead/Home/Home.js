@@ -27,8 +27,9 @@
                 function (i, v) {
 
                     // Add the phishy icon to any URLs that look suspect
-                    var vInnerText = v.innerText.toLowerCase().trim();
-                    var hrefText = v.href.toLowerCase().trim();
+                    var regExp = new RegExp('/+$');
+                    var vInnerText = v.innerText.toLowerCase().trim().replace(regExp, "");
+                    var hrefText = v.href.toLowerCase().trim().replace(regExp, "");;
                     var phishyIcon = "";
                     var linkIsPhishy = ((vInnerText.search("http") == 0) && vInnerText != hrefText);
 
