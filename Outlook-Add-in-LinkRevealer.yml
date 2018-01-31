@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: 'Outlook add-in: Finds and parse all links in an email'
+  path: ''
+  description: This sample shows how to use the JavaScript API for Office to create an Outlook add-in that parses the body of an email looking for hyperlinks.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: jamescro
+  platforms: []
+  languages:
+  - JavaScript
+  extensions:
+    products:
+    - Outlook
+    scenarios: []
