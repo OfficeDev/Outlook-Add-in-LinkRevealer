@@ -1,3 +1,16 @@
+---
+topic: sample
+products:
+- Outlook
+- Office 365
+languages:
+- JavaScript
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 8/27/2015 1:08:49 PM
+---
 # Outlook add-in: Mail add-in for a read scenario which finds and parses all links in the body of an email. 
 
 **Table of contents**
