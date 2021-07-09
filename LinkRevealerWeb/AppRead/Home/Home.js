@@ -5,55 +5,47 @@
 
 /// <reference path="../App.js" />
 
-(function () {
+(() => {
     "use strict";
 
     // The Office initialize function must be run each time a new page is loaded
     Office.initialize = function (reason) {
-        $(document).ready(function () {
+        $(document).ready(() => {
             app.initialize();
             Office.context.mailbox.item.body.getAsync("html", processHtmlBody);
         });
     };
-
 
     function processHtmlBody(asyncResult) {
         var htmlParser = new DOMParser().parseFromString(asyncResult.value, "text/html");
         var links = htmlParser.getElementsByTagName("a");
         var phishyLinkCount = 0;
         var normalLinkCount = 0;
-        $.each(
-               links,
-                function (i, v) {
+        $.each(links, (_, v) => {
 
-                    // Add the phishy icon to any URLs that look suspect
-                    var regExp = new RegExp('/+$');
-                    var vInnerText = v.innerText.toLowerCase().trim().replace(regExp, "");
-                    var hrefText = v.href.toLowerCase().trim().replace(regExp, "");;
-                    var phishyIcon = "";
-                    var linkIsPhishy = ((vInnerText.search("http") == 0) && vInnerText != hrefText);
+            // Add the phishy icon to any URLs that look suspect
+            var regExp = new RegExp('/+$');
+            var vInnerText = v.innerText.toLowerCase().trim().replace(regExp, "");
+            var hrefText = v.href.toLowerCase().trim().replace(regExp, "");;
+            var linkIsPhishy = ((vInnerText.search("http") == 0) && vInnerText != hrefText);
 
-                    if (linkIsPhishy) {
-                        phishyLinkCount++;
-                        $("#links-table").append("<div class='ms-Table-row ms-font-xs ms-bgColor-redDark ms-font-color-white'>" +
-                                                "<span class='ms-Table-cell phishy-link'>" + vInnerText + "</span>" +
-                                                "<span class='ms-Table-cell phishy-link'>" + hrefText + "</span>" +
-                                                "</div>");
-                    }
-                    else {
-                        normalLinkCount++;
-                        $("#links-table").append("<div class='ms-Table-row ms-font-xs ms-font-color-white'>" +
-                                               "<span class='ms-Table-cell normal-link'>" + vInnerText + "</span>" +
-                                               "<span class='ms-Table-cell normal-link'>" + hrefText + "</span>" +
-                                               "</div>");
-                    }
+            if (linkIsPhishy) {
+                phishyLinkCount++;
+                $("#links-table").append(`<div class='ms-Table-row ms-font-xs ms-bgColor-redDark ms-font-color-white'>
+                                            <span class='ms-Table-cell phishy-link'>${vInnerText}</span>
+                                            <span class='ms-Table-cell phishy-link'>${hrefText}</span>
+                                        </div>`);
+            } else {
+                normalLinkCount++;
+                $("#links-table").append(`<div class='ms-Table-row ms-font-xs ms-font-color-white'>
+                                            <span class='ms-Table-cell normal-link'>${vInnerText}</span>
+                                            <span class='ms-Table-cell normal-link'>${hrefText}</span>
+                                        </div>`);
+            }
+        });
 
-                }
-            );
-
-        $('#result').append("Number of links found in this email: " + (normalLinkCount + phishyLinkCount) + " Number of phishy links (red): " + phishyLinkCount);
+        $('#result').append(`Number of links found in this email: ${normalLinkCount + phishyLinkCount} Number of phishy links (red): ${phishyLinkCount}`;
     }
-
 })();
 
 // *********************************************************
